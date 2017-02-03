@@ -7,5 +7,6 @@ class Createslots < ActiveRecord::Migration[5.0]
       t.integer :course_id, null: false
 
       t.timestamps
+    end 
   end
 end

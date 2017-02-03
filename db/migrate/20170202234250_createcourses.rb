@@ -6,6 +6,7 @@ class Createcourses < ActiveRecord::Migration[5.0]
       t.integer :subject_id, null: false
       t.integer :user_id, null: false
 
-      t.timestamps null: false 
+      t.timestamps null: false
+    end
   end
 end
