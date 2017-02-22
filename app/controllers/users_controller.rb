@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def index
-
+    @user = current_user
   end
 
   def new
@@ -20,6 +20,23 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(session[:user_id])
+  end
+
+  def edit
+    @user = current_user
+  end
+
+  def update
+    @user = current_user
+    @user.update(user_params)
+    redirect_to user_path(@user)
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    session[:user_id] = nil
+    redirect_to login_path
   end
 
   private
