@@ -1,1 +1,8 @@
 <h1>The Home Page</h1>
+<p>Subjects
+  <ul>
+    <%@subjects.each do |field| %>
+      <li><%=field.subject%></li>
+    <%end%>
+  </ul>
+</p>
