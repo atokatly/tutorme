@@ -1,2 +1,4 @@
 <h1>Show page</h1>
 <p>Hi <%= @user.first_name %>!</p>
+<%= link_to "Edit Settings", edit_user_path(current_user)%> <br />
+<%= link_to 'Delete Account', user_path(@user), method: :delete, data: {confirm: "Really delete your account?"}%>
