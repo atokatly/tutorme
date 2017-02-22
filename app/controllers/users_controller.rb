@@ -2,6 +2,8 @@ class UsersController < ApplicationController
 
   def index
     @user = current_user
+    @courses = Course.all
+    @subjects = Subject.all 
   end
 
   def new
